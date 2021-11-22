@@ -1,0 +1,31 @@
+.customButton {
+  background-color: transparent;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  font-family: "Dancing Script", cursive;
+  cursor: pointer;
+  font-size: 2rem;
+  position: relative;
+}
+
+.customButton::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: crimson;
+  top: 0;
+  z-index: -100;
+  left: 0;
+  transition: all 0.5s;
+  border-radius: 0.5rem;
+}
+
+.customButton:hover {
+  color: white;
+  z-index: 100;
+}
+.customButton:hover::before {
+  width: 100%;
+}
